@@ -1,0 +1,282 @@
+#formulario{
+    position: relative;
+    background: url('../img/fondoContacto.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 95em;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.f1,.f2{
+    width: 50%;
+    position: relative;
+}
+.formImg {
+    background: url('../img/cont1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 43em;
+    transition: .8s;
+}
+.f1 .formImg img{
+    width: 100%;
+}
+.f2{
+    background: #fff;
+}
+.form-content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 85%;
+}
+.formText{
+    color: #ff7608;
+    text-align: center;
+}
+.formText h2{
+    line-height: 45px;
+}
+
+.formText b{
+    font-family: 'MonserratBLack';
+    font-size: 65px;
+}
+
+#formContacto input, .input-mensaje textarea{
+    border: 1px solid #ff7608;
+}
+.col-left{
+    padding-right: 0!important;
+}
+.col-left input{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0px;
+}
+.col-right{
+    padding-left: 0!important;
+}
+.col-right input{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+#mensaje{
+    resize: none;
+    margin-top: 1rem;
+    max-height: 130px;
+    height: 130px;
+}
+#button-contacto{
+    border: none;
+    margin-top: 1rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    background: #ff7608;
+    font-weight: bolder;
+    font-family: 'MonserratThin';
+    border-radius: 9px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 1s all ease;
+}
+#button-contacto::before{
+    content: '';
+    background: #ffd817;
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+}
+#button-contacto:hover::before{
+    height: 100%;
+}
+#button-contacto:hover{
+    color: #ff7608;
+}
+.form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #22211f;
+}
+.form-control::-moz-placeholder { /* Firefox 19+ */
+    color: #22211f;
+}
+.form-control::-ms-input-placeholder { /* IE 10+ */
+    color: #22211f;
+}
+.form-control::-moz-placeholder { /* Firefox 18- */
+    color: #22211f;
+}
+
+
+.modal-header{
+    background: linear-gradient(to right,#ff9f0c,#ff7303);
+    color: white;
+    font-family: 'MonserratBLack';
+}
+.modal-body{
+    background: #f5f4f4;
+}
+.modal-body p{
+    font-family: 'MonserratRegular';
+}
+.modal-footer{
+    background: #f5f4f4;
+    border: none;
+}
+.btn-default{
+    background: #ffd817;
+    color: #22211f;
+}
+.btnClose{
+    position: relative;
+    right: 5px;
+    padding-bottom: 45px;
+}
+.btnClose button:hover{
+    color: #ff7303;
+}
+/**************************/
+
+@media screen and (max-width:1600px){
+
+    .contenedor {
+        width: 82em;
+    }
+}
+
+@media screen and (max-width:1400px){
+    .contenedor {
+        width: 70em;
+        height: 36em;
+    }
+    .formImg{
+        height: 100%;
+    }
+    .formImg img{
+        height: 100%;
+    }
+}
+@media screen and (max-width:1199px){
+    .contenedor {
+        width: 59em;
+    }
+    .formText h2 {
+        line-height: 40px;
+        font-size: 30px;
+    }    
+    .formText b {
+        font-size: 50px;
+    }
+}
+@media screen and (max-width:991px){
+    .contenedor {
+        width: 46em;
+        height: 33em;
+    }
+    .formText h2 {
+        line-height: 30px;
+        font-size: 22px;
+    }
+    .formText b {
+        font-size: 40px;
+    }
+    .form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        font-size: 14px;
+    }
+    .form-control::-moz-placeholder { /* Firefox 19+ */
+        font-size: 14px;
+    }
+    .form-control::-ms-input-placeholder { /* IE 10+ */
+        font-size: 14px;
+    }
+    .form-control::-moz-placeholder { /* Firefox 18- */
+        font-size: 14px;
+    }
+    #formContacto input, .input-mensaje textarea {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:767px){
+    #formulario {
+        height: 60em;
+    }
+    .contenedor {
+        width: 33em;
+        height: auto;
+    }
+    .f1, .f2 {
+        width: 100%;
+        position: relative;
+    }
+    .f1{
+        height: 18em;
+    }
+    .form-content {
+        position: relative;
+        padding: 30px 0;
+    }
+}
+@media screen and (max-width:575px){
+    .contenedor {
+        width: 22em;
+    }
+    #button-contacto {
+        width: 60%;
+    }
+}
+@media screen and (max-width:400px){
+    .contenedor {
+        width: 18em;
+    }
+    .formText h2 {
+        line-height: 27px;
+        font-size: 19px;
+    }
+    .formText b {
+        font-size: 33px;
+    }
+}
+
+/*********************/
+@media (max-height:660px) and (min-width:768px){
+    #formulario {
+        height: 41.22em;
+    }
+}
+@media (max-height:720px) and (min-width:992px){
+    #formulario {
+        height: 45em;
+    }
+}
+@media (max-height:800px) and (min-width:1200px){
+    #formulario {
+        height: 50em;
+    }
+}
+@media (max-height:900px) and (min-width:1401px){
+    #formulario {
+        height: 56.3em;
+    }
+}
+@media (max-height:850px) and (min-width:1601px){
+    #formulario {
+        height: 53.1em;
+    }
+}
+

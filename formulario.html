@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#ff7804">
+    <meta name="description" content="Disfruta de los mejores viajes dentro del Perú. Conoce todos los paquetes que tenemos para ti.">
+    <meta name="keywords" content="Su norte, Taxi sunorte, paquetes, nosotros, manual">
+    <meta name="author" content="Grupo Nelica">
+
+    <link rel="icon" href="img/logoima.png">
+    <title>Su Norte</title>
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbarSNorte navbar navbar-expand-lg navbar-light">
+        <div class="logonavbar">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logoSNorte"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbartSN">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#paquetes">Paquetes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="formulario.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="manual.html">Manual</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Mi cuenta</a>
+                </li>
+            </ul>
+        </div>
+        <div class="redes redesnav">
+            <ul class="nav justify-contect-center">
+                <li class="nav-item nav-redes">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <span class="fa-stack facebook">
+                            <i class="fab fa-facebook-f fa-stack-1x"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- navbar responsive -->   
+        <div class="toogle-responsive">
+            <div class="hambur-responsive"></div>
+        </div>
+        <div class="sidebar-responsive">
+            <ul>
+                <li class="nav-link nav-hmenu">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <span class="fa-stack facebook">
+                            <i class="fab fa-facebook-f fa-stack-1x"></i>
+                        </span>
+                    </a>
+                </li>
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="index.html#paquetes">Paquetes</a></li>
+                <li><a class="nav-link" href="formulario.html">Contacto</a></li>
+                <li><a class="nav-link" href="manual.html">Manual de app</a></li>
+                <li><a class="nav-link" href="#">Mi cuenta</a></li>
+            </ul>
+        </div>
+    </nav>    
+    <!-- fin navbar -->
+
+
+    <section id="formulario">
+        <div class="contenedor">
+            <div class="f1 wow fadeInLeft">
+                <div class="formImg">
+                    <!-- <img src="img/cont1.jpg" alt="cont1"> -->
+                </div>
+            </div>
+            <div class="f2 wow fadeInRight">                
+                <div class="form-content">
+                    <div class="formText">
+                        <h2>¿A DÓNDE TE GUSTARÍA<br><b>VIAJAR?</b></h2>
+                    </div>                    
+                    <div>
+                        <div class="text-right btnClose">
+                            <button type="button" class="close font" id="btnCCond" data-toggle="tooltip" data-placement="top" title="" data-original-title="Limpiar formulario">
+                                <span aria-hidden="true"><i class="fas fa-brush" style="transform: rotate(-135deg);"></i></span>
+                            </button>
+                        </div>
+                        <form id="formContacto" method="POST">
+                            <div class="form-group">
+                                <input type="text" id="nombre-contact" class="form-control" placeholder="Nombre Completo">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="empresa-contact" placeholder="Empresa">
+                            </div>
+                            <div class="form-row">
+                                <div class="col col-left">
+                                    <input type="tel" id="telefono-contact" class="form-control" minlength="7" maxlength="9" placeholder="Teléfono" pattern="[0-9]{3}[0-9]{3}[0-9]{3}|[0-9]{7}">
+                                </div>
+                                <div class="col col-right">
+                                    <input type="email" id="email-contact" class="form-control" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group input-mensaje">
+                                <textarea id="mensaje" class="form-control" rows="3" placeholder="Mensaje" required></textarea>
+                            </div>
+                            <button id="button-contacto" type="submit" class="btn btn-primary">SOLICITAR <i class="fas fa-angle-double-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="modalConsulta">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Mensaje enviado correctamente</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Le responderemos lo más pronto posible.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default close-modal-consulta btn-close" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->   
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>new WOW().init();</script>
+    <script src="js/formulario.js"></script>  
+</body>
+</html>
